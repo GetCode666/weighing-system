@@ -24,5 +24,6 @@ public class Order {
     private String status; //active closed  cancelled
     private LocalDateTime createDate;
     private String createUser;
+    private BigDecimal targetNetWeight;
 }
 

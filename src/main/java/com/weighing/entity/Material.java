@@ -8,7 +8,7 @@ import org.springframework.data.annotation.Id;
 
 @Entity
 @Data
-@Table(name="material")
+@Table(name="Material")
 public class Material {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

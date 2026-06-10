@@ -1,6 +1,5 @@
 package com.weighing.entity;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -13,26 +12,23 @@ import java.time.LocalDateTime;
 public class WeightRecord {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String orderNo;
+    private Long weightId;
+    private String orderNo;//提单号
     private String orderType;  //ship recevie
-    private String materialCode;
-    private String materialName;
+    private String materialName;//物资名称
     private BigDecimal targetNetWeight;
     private BigDecimal firstWeight;
     private BigDecimal secondWeight;
     private LocalDateTime firstWeightDate;
+    private String firstOperatorName;
     private LocalDateTime secondWeightDate;
+    private String SecondOperatorName;
     private BigDecimal netWeight;
     private double packageWeight;
     private double extraWeight;//扣杂
     private String first_scaleID;
     private String second_scaleID;
-    private String sender;
-    private String receiver;
     private LocalDateTime createDate;
-    private Long createBy;
-    private String remark;
     private String status;// complete cancle  closed
-    private boolean printer;
+    private String licensePlate;
 }

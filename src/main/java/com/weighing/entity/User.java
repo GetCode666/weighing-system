@@ -9,13 +9,14 @@ import org.springframework.data.annotation.Id;
 
 @Data
 @Entity
-@Table(name="users")
+@Table(name="Users")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private int usreId;
     private String username;
-    private  String password;
+    private  String passwordHash;
     private String role;
+
 
 }
