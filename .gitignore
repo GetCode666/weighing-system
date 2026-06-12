@@ -1,0 +1,15 @@
+# Java 后端
+**/target/
+**/.mvn/
+**/mvnw
+**/mvnw.cmd
+**/.DS_Store
+
+# 前端
+**/node_modules/
+**/dist/
+**/.vscode/
+**/.idea/
+
+# 日志
+*.log
