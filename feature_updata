@@ -1,0 +1,28 @@
+五、未来完善路线图
+短期（完善 MVP）
+优先级	任务	说明
+P0	补齐 saveWeightRecord() 逻辑	将每次过磅原始数据写入 WeightRecord 表，确保流水完整
+P0	完成 TransactionType 枚举	定义交易类型（收货过磅/发货过磅/皮重去皮等）
+P0	修复 getCurrentUserName()	从 SecurityContext 中获取真实登录用户 ID
+P1	前端路由守卫	在 router/index.js 添加 beforeEach 守卫，未登录跳转 /login
+P1	整理重复代码	删除 config/CustomUserDetailsService.java，只保留 Service 下的版本
+P1	删除 Main.java	清理 IDE 生成的无效文件
+中期（功能增强）
+模块	内容
+数据库迁移	从 H2 切换到 MySQL/PostgreSQL，保证数据持久化和生产可用
+称重流水查询	前端增加"称重流水记录"页面，支持按日期/车牌号/订单号检索
+过磅数据导出	支持导出 Excel/PDF 报表（称重日报、月报、按订单汇总）
+地磅硬件对接	集成串口通信（RS232/RS485），自动读取地磅仪表数据，替代手动输入
+管理后台	新增：物料字典管理、用户管理、订单审核、数据看板（Dashboard）
+打印功能	称重完成自动打印小票（过磅单），支持热敏打印机/激光打印机
+权限细化	扩展角色体系：系统管理员、数据审核员、过磅员、只读查询权限
+长期（生产就绪）
+方向	措施
+容器化部署	编写 Dockerfile + docker-compose.yml，一键拉起前后端 + 数据库
+CI/CD	接入 GitHub Actions / Jenkins，自动化构建、测试、部署
+安全加固	JWT 密钥环境变量化、接口频率限制（Rate Limiting）、SQL 注入防护审查
+监控告警	接入 Spring Boot Actuator + Prometheus + Grafana，异常称重数据自动告警
+前后端改造	前端升级到 Vite（替代 Vue CLI），后端引入 MapStruct 做对象映射，引入 Flyway 做数据库版本管理
+多磅房支持	支持多地磅同时工作，按磅号分组管理称重数据
+黑匣子模式	关键操作不可篡改审计日志，符合计量行业监管要求
+这是一个典型的工业物联网 + 管理系统的 MVP，骨架已经搭好，核心称重流程能跑通，接下来的关键是补全数据持久化 + 完善前端页面 + 向正式数据库和生产环境迁移。需要我从哪个方面开始帮你实施改进？
