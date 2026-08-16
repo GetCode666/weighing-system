@@ -1,66 +1,65 @@
-pipeline {
-    agent any
-    tools {
-        jdk "JDK21"
-        maven "maven3"
-        nodejs "nodejs26"
+agent any
+tools {
+    jdk "JDK21"
+    maven "maven3"
+    nodejs "nodejs26"
+}
+environment {
+    ENV_NAME = "dev"
+    BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
+}
+stages {
+    stage('1.拷贝服务器本地代码到工作空间') {
+        steps {
+            sh '''
+            cp -r /opt/code/weighing-system/* ./
+            ls -l
+            '''
+            echo "当前构建环境=${ENV_NAME},构建版本号=${BUILD_VERSION}"
+        }
     }
-    environment {
-        ENV_NAME = "dev"
-        BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
-    }
-    stages {
-        stage('1.拷贝服务器本地代码到工作空间') {
-            steps {
+
+    stage('2.后端Maven打包Java') {
+        steps {
+            dir("weighing-system-backend") {
                 sh '''
-                cp -r /opt/code/weighing-system/* ./
-                ls -l
+                mvn clean package -DskipTests
                 '''
-                echo "当前构建环境=${ENV_NAME},构建版本号=${BUILD_VERSION}"
-            }
-        }
-
-        stage('2.后端Maven打包Java') {
-            steps {
-                dir("weighing-system-backend") {
-                    sh '''
-                    mvn clean package -DskipTests
-                    '''
-                }
-            }
-        }
-
-        stage('3.前端Vue编译打包') {
-            steps {
-                dir("weighing-frontend") {
-                    sh '''
-                    npm config set registry https://registry.npmmirror.com
-                    npm install
-                    npm run build
-                    '''
-                }
-            }
-        }
-
-        stage('4.归档构建产物') {
-            post {
-                always {
-                    archiveArtifacts artifacts: '''
-weighing-system-backend/target/*.jar,
-weighing-frontend/dist/**
-''', fingerprint: true, allowEmptyArchive: false
-                }
             }
         }
     }
 
-    post {
-        success {
-            echo "✅流水线打包完成！版本：${BUILD_VERSION}"
-            echo "👉 Jenkins页面【构建产物】可以下载后端jar、前端dist包"
+    stage('3.前端Vue编译打包') {
+        steps {
+            dir("weighing-frontend") {
+                sh '''
+                npm config set registry https://registry.npmmirror.com
+                npm install
+                npm run build
+                '''
+            }
         }
-        failure {
-            echo "❌流水线打包执行失败！查看控制台日志排查问题"
+    }
+
+    stage('4.归档构建产物') {
+        steps {
+            archiveArtifacts artifacts: 'weighing-system-backend/target/*.jar,weighing-frontend/dist/**', fingerprint: true, allowEmptyArchive: false
         }
+        // 如果你确实需要添加阶段级别的后置状态通知，可以保留post块
+        post {
+            success {
+                echo "✅ 构建产物归档已成功执行"
+            }
+        }
+    }
+}
+
+post {
+    success {
+        echo "✅流水线打包完成！版本：${BUILD_VERSION}"
+        echo "👉 Jenkins页面【构建产物】可以下载后端jar、前端dist包"
+    }
+    failure {
+        echo "❌流水线打包执行失败！查看控制台日志排查问题"
     }
 }
