@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9ded19e8-39ab-4e9d-9fac-1a7668a2178b" name="更改" comment="init&#10;Initial commit" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="JavaScript File" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="SWAP_SIDES_IN_COMPARE_BRANCHES" value="true" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;GetCode666&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;git@github.com:GetCode666/weighing-system.git&quot;,
+    &quot;accountId&quot;: &quot;367306bb-88ed-4c72-9553-9cfcca5779d9&quot;
+  }
+}</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="3HWVUchUc4s5BKj6XJXTKLoyhOm" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "disable.download.node.interpreter.editor.notification": "true",
+    "git-widget-placeholder": "dev",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "E:/Documents/weighing-system",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "E:/Program Files/nodejs/node",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "D:\\Program Files\\JetBrains\\IntelliJ IDEA 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Documents\weighing-system" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Documents\weighing-system\weighing-frontend\src\assets" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WeightApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="weighing-system-backend" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.weighing.WeightApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
+        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="9ded19e8-39ab-4e9d-9fac-1a7668a2178b" name="更改" comment="" />
+      <created>1785983829084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1785983829084</updated>
+      <workItem from="1785983830564" duration="26328000" />
+      <workItem from="1786086628809" duration="8187000" />
+      <workItem from="1786095302376" duration="1893000" />
+      <workItem from="1786168192029" duration="1612000" />
+      <workItem from="1786189054537" duration="853000" />
+      <workItem from="1786189943151" duration="618000" />
+      <workItem from="1786190591152" duration="13037000" />
+      <workItem from="1786769443668" duration="1057000" />
+      <workItem from="1786809706016" duration="662000" />
+      <workItem from="1786846700079" duration="5368000" />
+      <workItem from="1786862171164" duration="14158000" />
+      <workItem from="1786887985181" duration="1686000" />
+      <workItem from="1786889833575" duration="2867000" />
+    </task>
+    <task id="LOCAL-00001" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786096383120</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1786096383120</updated>
+    </task>
+    <task id="LOCAL-00002" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786096401734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1786096401734</updated>
+    </task>
+    <task id="LOCAL-00003" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786853399469</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1786853399469</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786854467621</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1786854467621</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786863526618</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1786863526618</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786863920989</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1786863920989</updated>
+    </task>
+    <task id="LOCAL-00007" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786864101153</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1786864101153</updated>
+    </task>
+    <task id="LOCAL-00008" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786875906958</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1786875907014</updated>
+    </task>
+    <task id="LOCAL-00009" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786876732314</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1786876732314</updated>
+    </task>
+    <task id="LOCAL-00010" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786876744327</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1786876744327</updated>
+    </task>
+    <task id="LOCAL-00011" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786876902613</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1786876902613</updated>
+    </task>
+    <task id="LOCAL-00012" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786877020002</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1786877020002</updated>
+    </task>
+    <task id="LOCAL-00013" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786877320804</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1786877320804</updated>
+    </task>
+    <task id="LOCAL-00014" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786877913674</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1786877913674</updated>
+    </task>
+    <task id="LOCAL-00015" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786893039584</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1786893039584</updated>
+    </task>
+    <task id="LOCAL-00016" summary="init&#10;Initial commit">
+      <option name="closed" value="true" />
+      <created>1786893139157</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1786893139157</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/weighing-frontend" />
+      <path value="$PROJECT_DIR$/weighing-system-backend" />
+    </ignored-roots>
+    <MESSAGE value="测试" />
+    <MESSAGE value="init&#10;Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="init&#10;Initial commit" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
