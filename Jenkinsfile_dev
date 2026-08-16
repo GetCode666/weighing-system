@@ -10,8 +10,12 @@ pipeline {
         BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
     }
     stages {
-        stage('1.打印构建版本') {
+        stage('1.拷贝服务器本地代码到工作空间') {
             steps {
+                sh '''
+                cp -r /opt/code/weighing-system/* ./
+                ls -l
+                '''
                 echo "当前构建环境=${ENV_NAME},构建版本号=${BUILD_VERSION}"
             }
         }
