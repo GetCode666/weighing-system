@@ -9,13 +9,19 @@ pipeline {
         ENV_NAME = "dev"
         BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
     }
-    stage('0.查看源码目录结构') {
-        steps {
-            sh 'ls -l'
-            sh 'ls -l */'
-        }
-    }
     stages {
+
+        stage('0.打印仓库目录结构') {
+                steps {
+                    sh '''
+                    echo "=== 根目录文件 ==="
+                    ls -la
+                    echo "=== 所有子目录 ==="
+                    ls -la */
+                    '''
+                }
+            }
+
         stage('1.打印构建版本') {
             steps {
                 echo "当前构建环境=${ENV_NAME},构建版本号=${BUILD_VERSION}"
