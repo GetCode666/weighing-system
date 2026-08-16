@@ -39,12 +39,23 @@ pipeline {
         }
 
         stage('4.归档构建产物') {
+            steps {
+                // 将 archiveArtifacts 放在 steps 中
+                // 注意：如果前面的 stage 失败，这个 stage 默认不会执行。
+                // 如果你希望即使前面失败也尝试归档，需要使用 catchError 或改变 pipeline 策略，
+                // 但通常归档只在成功时进行。
+                script {
+                    // 使用 script 块可以更灵活地处理，或者直接调用 step
+                    archiveArtifacts artifacts: 'weighing-system-backend/target/*.jar, weighing-frontend/dist/**', fingerprint: true, allowEmptyArchive: false
+                }
+            }
+            // 如果确实需要在 post 中做额外处理，可以保留 post，但必须有 steps
             post {
-                always {
-                    archiveArtifacts artifacts: '''
-weighing-system-backend/target/*.jar,
-weighing-frontend/dist/**
-''', fingerprint: true, allowEmptyArchive: false
+                success {
+                    echo "✅ 产物归档成功"
+                }
+                failure {
+                    echo "❌ 产物归档失败"
                 }
             }
         }
