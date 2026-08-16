@@ -1,0 +1,42 @@
+一、JWT 是什么？
+JWT（JSON Web Token） 是一种紧凑的、自包含的令牌格式，用于在网络请求中安全地传递用户身份和权限信息。
+它由三部分组成：
+Header（头部）：声明签名算法和令牌类型。
+Payload（载荷）：存放用户信息（如用户名、角色、过期时间等），这部分是 Base64Url 编码的 JSON。
+Signature（签名）：用于验证令牌是否被篡改。
+
+为什么要用 JWT？（在这个称重系统中）
+我们的系统需要区分 操作员（地磅员） 和 管理员，并且要保证每个请求都是经过认证的。
+传统方式是使用 Session（服务端存储会话），但缺点是：
+需要服务端存储 Session，集群部署时需要共享存储（如 Redis）。
+移动端或前后端分离场景下不够灵活。
+JWT 的优点：
+无状态：服务端不存储任何会话信息，所有用户信息都包含在令牌中，便于横向扩展。
+跨平台：适合 Web、移动端、小程序等多种客户端。
+自包含：令牌中直接包含用户名、角色、过期时间，无需再查数据库（除了必要的用户详情加载）。
+在我们的设计中：
+用户登录成功后，服务端生成一个 JWT 返回给前端。
+前端在后续请求的 Authorization 头中携带 Bearer <token>。
+服务端通过过滤器验证 JWT 的签名和有效期，从令牌中提取用户名，然后加载该用户的权限，完成认证。
+
+
+org.springframework.security.core.userdetails.User 是 Spring Security 框架提供的一个核心类，其主要作用是‌作为 UserDetails 接口的默认基础实现，用于封装和标准化用户的核心认证信息‌。
+
+它在 Spring Security 的身份认证（Authentication）和授权（Authorization）流程中扮演着“数据载体”的关键角色。以下是其具体作用和功能详解：
+
+1. 标准化用户信息模型
+Spring Security 需要从不同的数据源（如内存、数据库 JDBC、LDAP 等）加载用户信息。由于不同数据源的用户数据结构各异，User 类提供了一个统一的标准模型，实现了 UserDetails 接口。这使得 Spring Security 的核心组件（如 AuthenticationManager）无需关心底层数据来源，只需通过统一的接口即可获取用户信息进行验证。
+
+2. 封装核心认证属性
+User 类通过构造函数或 Builder 模式封装了进行安全认证所必需的关键字段：
+
+‌身份标识‌：用户名（username）。
+‌凭证信息‌：密码（password，通常为加密后的字符串，如 BCrypt）。
+‌权限集合‌：用户拥有的角色或权限（Authorities），类型为 Collection<? extends GrantedAuthority>。
+‌账户状态标志‌：
+enabled：账户是否启用。
+accountNonExpired：账户是否未过期。
+credentialsNonExpired：凭证（密码）是否未过期。
+accountNonLocked：账户是否未锁定。
+这些状态标志直接决定了用户是否允许登录以及登录后的行为限制。
+

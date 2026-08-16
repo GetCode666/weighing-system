@@ -1,0 +1,9 @@
+@RestController 是 Spring Framework（特别是 Spring MVC 和 Spring Boot）中用于构建
+RESTful Web 服务‌的核心注解。
+简单来说，它是一个‌组合注解‌，相当于同时使用了 @Controller 和 @ResponseBody。它的主要作用是标识一个类为控制器，
+并确保该类中所有方法的返回值直接写入 HTTP 响应体（Response Body），通常以 JSON 或 XML 格式返回给客户端，
+而不是返回视图页面（如 JSP、HTML）。
+
+
+controller层
+访问界面的接口层，一个界面需要哪些数据进行交互，

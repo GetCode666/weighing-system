@@ -1,0 +1,2 @@
+Repository 层负责与数据库交互，每个实体对应一个 Repository 接口，
+继承 JpaRepository 即可获得基本的 CRUD 方法，我们只需定义一些特定的查询方法。
