@@ -1,0 +1,54 @@
+pipeline {
+    agent any
+
+    tools {
+        jdk "JDK21"
+        maven "maven3"
+        nodejs "nodejs26"
+    }
+
+    environment {
+        ENV_NAME = "dev"
+        BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
+    }
+
+    stages {
+        stage('1.后端Maven打包Java') {
+            steps {
+                dir("weighing-system-backend") {
+                    sh '''
+                        mvn clean package -DskipTests
+                    '''
+                }
+            }
+        }
+
+        stage('2.前端Vue编译打包') {
+            steps {
+                dir("weighing-frontend") {
+                    sh '''
+                        npm config set registry https://registry.npmmirror.com
+                        npm install
+                        npm run build
+                    '''
+                }
+            }
+        }
+
+        stage('3.归档构建产物') {
+            steps {
+                archiveArtifacts artifacts: 'weighing-system-backend/target/*.jar,weighing-frontend/dist/**', fingerprint: true, allowEmptyArchive: false
+            }
+        }
+    }
+
+    post {
+        success {
+            echo "✅流水线打包完成！版本：${BUILD_VERSION}"
+            echo "👉 Jenkins页面【构建产物】可以下载后端jar、前端dist包"
+        }
+        failure {
+            echo "❌流水线打包执行失败！查看控制台日志排查问题"
+        }
+    }
+}
