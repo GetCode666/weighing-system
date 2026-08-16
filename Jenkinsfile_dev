@@ -9,6 +9,12 @@ pipeline {
         ENV_NAME = "dev"
         BUILD_VERSION = "${ENV_NAME}-build${env.BUILD_NUMBER}"
     }
+    stage('0.查看源码目录结构') {
+        steps {
+            sh 'ls -l'
+            sh 'ls -l */'
+        }
+    }
     stages {
         stage('1.打印构建版本') {
             steps {
