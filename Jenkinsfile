@@ -3,7 +3,7 @@ pipeline {
     tools {
             jdk "JDK21"
             maven "maven3"
-            nodejs "node26"
+            nodejs "nodejs26"
         }
     environment {
         // harbor地址、项目名，改成你自己的
