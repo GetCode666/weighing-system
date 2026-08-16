@@ -3,7 +3,7 @@ pipeline {
     tools {
         jdk "JDK21"
         maven "maven3"
-        nodejs "node26"
+        nodejs "nodejs26"
     }
     environment {
         // 根据git分支自动确定环境
